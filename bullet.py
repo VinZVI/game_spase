@@ -6,9 +6,9 @@ class Bullet (pygame.sprite.Sprite):
         # создаем пулю в позиции пушки
         super(Bullet, self).__init__() # берем из основного класса sprite -> init
         self.screen = screen
-        self.rect = pygame.Rect(0, 0, 2, 12) # создаем спрайт пули и где он появляется
+        self.rect = pygame.Rect(0, 0, 250, 12) # создаем спрайт пули и где он появляется
         self.color = 139, 195, 74
-        self.speed = 1.5
+        self.speed = 6.5
         self.rect.centerx = gun.rect.centerx # пуля появляется по центру пушки
         self.rect.top = gun.rect.top # пуля появляется в верхней части пушки
         self.y = float(self.rect.y)

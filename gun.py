@@ -1,11 +1,11 @@
 import pygame
+from pygame.sprite import Sprite
 
-
-class Gun():
+class Gun(Sprite):
 
     def __init__(self, screen):
         # инициализация пушки
-
+        super(Gun, self).__init__()
         self.screen = screen
         self.image = pygame.image.load('image/pixil-frame-0.png') # подгружаем картинку
         self.rect = self.image.get_rect() # представляем картинку как прямоугольник
@@ -30,3 +30,7 @@ class Gun():
             self.center -= 1.5
 
         self.rect.centerx = self.center
+
+    def  create_gun(self):
+        """размечает пушку по центру"""
+        self.center = self.screen_rect.centerx
